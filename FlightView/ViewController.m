@@ -12,11 +12,24 @@
 @end
 
 @implementation ViewController
-
+@synthesize returnDateLabel,returnDateButton,selectDatePicker;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    returnDateLabel.hidden = true;
+    returnDateButton.hidden = true;
+    selectDatePicker.hidden = true;
 }
 
 
+
+- (IBAction)showReturnDateAction:(id)sender {
+    if(returnDateLabel.hidden){
+        returnDateLabel.hidden = false;
+        returnDateButton.hidden = false;
+    }else{
+        returnDateLabel.hidden = true;
+        returnDateButton.hidden = true;
+    }
+    
+}
 @end
